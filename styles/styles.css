@@ -12,7 +12,7 @@
 
 :root {
   /* colors */
-  --background-color: cyan;
+  --background-color:cyan
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: magenta;
@@ -324,3 +324,8 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+
+main .lightgrey  {
+  background-color: rgb(241, 230, 230);
+} 
