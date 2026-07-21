@@ -12,7 +12,7 @@
 
 :root {
   /* colors */
-  --background-color: white;
+  --background-color:white
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
@@ -161,7 +161,8 @@ a:any-link {
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  /* color: var(--link-hover-color); */
+  color: red;
   text-decoration: underline;
 }
 
@@ -323,3 +324,8 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+
+main .lightgrey  {
+  background-color: rgb(241, 230, 230);
+} 
