@@ -12,6 +12,13 @@ import {
   buildBlock,
 } from './aem.js';
 
+//Apply class to anchor tag
+const myAnchor = document.querySelector('a[href="http://www.google.com"]');
+if(myAnchor){
+myAnchor.setAttribute('id', 'newIconId');
+myAnchor.classList.add('button', 'secondary');
+}
+
 if (window.trustedTypes && window.trustedTypes.createPolicy) {
   const innerTT = window.trustedTypes.createPolicy('tt-inner', {
     createHTML: (s) => s, // avoid stack overflow
@@ -216,3 +223,37 @@ async function loadPage() {
 }
 
 loadPage();
+
+
+const breadcrumbs = document.querySelector('.breadcrumbsblock ul');
+if(breadcrumbs){
+  breadcrumbs.classList.add('breadcrumbs');
+}
+
+const breadcrumbs__item = document.querySelectorAll('.breadcrumbsblock ul li');
+const breadcrumbs__link = document.querySelectorAll('.breadcrumbsblock ul li a');
+const breadcrumbs__link__active = document.querySelectorAll('.breadcrumbsblock ul li:last-child a:last-child');
+
+//breadcrumbs__link
+if(breadcrumbs__item){
+  breadcrumbs__item.forEach((item) => {
+    item.classList.add('breadcrumbs__item');
+  });
+}
+
+if(breadcrumbs__link){
+  breadcrumbs__link.forEach((link) => {
+    link.classList.add('breadcrumbs__link');
+  });
+}
+
+if(breadcrumbs__link__active){
+  breadcrumbs__link__active.forEach((linkactive) => {
+    linkactive.classList.add('breadcrumbs__link','breadcrumbs__link--active');
+  });
+}
+
+
+
+
+
