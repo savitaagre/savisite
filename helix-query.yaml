@@ -1,7 +1,15 @@
-title:
 indices:
   default:
-include:
-exclude:
-target:
-properties:
+    include:
+      
+    exclude:
+    target: '/query-index'
+    properties:
+      title:
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(e1, 'content')
+      description:      
+        select: head > meta[property="og:description"]
+        value: |
+          attribute(e1, 'content')
