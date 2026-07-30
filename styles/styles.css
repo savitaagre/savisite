@@ -12,10 +12,10 @@
 
 :root {
   /* colors */
-  --background-color: white;
+  --background-color: #ffffff;
   --light-color: #f8f8f8;
   --dark-color: #505050;
-  --text-color: #131313;
+  --text-color: #000000;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
@@ -161,7 +161,8 @@ a:any-link {
 }
 
 a:hover {
-  color: var(--link-hover-color);
+  /* color: var(--link-hover-color); */
+  color: red;
   text-decoration: underline;
 }
 
@@ -252,12 +253,20 @@ button.button.secondary:disabled:focus-visible {
 }
 
 /* high-impact call-to-action */
+/* a.button.accent,
+button.button.accent {
+  border-color: var(--link-color);
+  background-color: var(--link-color);
+  color: var(--background-color);
+} */
+
 a.button.accent,
 button.button.accent {
   border-color: var(--link-color);
   background-color: var(--link-color);
   color: var(--background-color);
 }
+
 
 a.button.accent:hover,
 a.button.accent:focus-visible,
@@ -322,4 +331,35 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+.breadcrumbs {
+  font-size: var(--body-font-size-s);
+  padding: 10px;
+  font-family: var(--body-font-family);
+}
+
+.breadcrumbs__item{
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.breadcrumbs__item:not(:last-of-type)::after {
+  content: "/";
+  margin: 0 5px;
+  color:#cccccc;  
+}
+
+.breadcrumbs__link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.breadcrumbs__link:hover {  
+  text-decoration: underline;
+}
+
+.breadcrumbs__link--active {  
+  color: #009578;
+  font-weight: bold;
 }
